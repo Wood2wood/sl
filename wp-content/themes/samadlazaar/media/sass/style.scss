@@ -1,0 +1,202 @@
+@import '../../../../../node_modules/bourbon/app/assets/stylesheets/_bourbon.scss';
+@import '../../../../../node_modules/bourbon-neat/core/_neat.scss';
+@import '../../../../../node_modules/bourbon-bitters/app/assets/stylesheets/_bitters.scss';
+
+$tablet-grid: (
+	media: 1000px
+);
+$mobile-grid: (
+	media: 500px
+);
+
+$colors: (
+	green: #9fd8cb
+);
+
+.container
+{
+	max-width:1200px;
+	margin:0 auto;
+	@include grid-container;
+}
+
+html, body
+{
+	margin:0;
+	padding:0;
+	background:#000;
+	background:url('../imgs/bg-pattern.png') repeat;
+}
+#header
+{
+	min-height:75px;
+	background:rgba(76, 72, 70, .3);
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	z-index:9999;
+	.logo
+	{
+		display:inline-block;
+		padding-top:15px;
+		@include grid-column(4);
+	}
+	nav
+	{
+		@include grid-column(8);
+		.menu
+		{
+			margin:0;
+			padding:0;
+			list-style-type:none;
+			float:right;
+			.menu-item
+			{
+				margin:0;
+				padding:0;
+				list-style-type:none;
+				float:left;
+				a
+				{
+					display:block;
+					height:75px;
+					line-height:75px;
+					color:#9fd8cb;
+					padding:0 20px;
+					&:hover
+					{
+						color:#FFF;
+					}
+				}
+				&:first-child
+				{
+					a
+					{
+						padding-left:0;
+					}
+				}
+				&:last-child
+				{
+					a
+					{
+						padding-right:0;
+					}
+				}
+				&.current-menu-item
+				{
+					a
+					{
+						color:#FFF;
+					}
+				}
+			}
+		}
+	}
+}
+#splash
+{
+	&:before
+	{
+		content:'';
+		width:100%;
+		height:100%;
+		position:absolute;
+		right:0;
+		bottom:0;
+		background-position:right 95px;
+		background-attachment:fixed;
+		opacity:0.8;
+	}
+	background-image:url('../imgs/splash-bg.jpg');
+	background-repeat:repeat;
+	margin:0;
+	padding:0;
+	position:absolute;
+	height:100%;
+	min-height:685px;
+	width:100%;
+	margin-bottom:100px;
+	img
+	{
+		position:absolute;
+		right:0;
+		bottom:0;
+	}
+	#samad
+	{
+		width:100%;
+		height:100%;
+		content:'';
+		background:url('../imgs/samad-lazaar3.png') no-repeat;
+		background-position:right bottom;
+		@include grid-container;
+		max-width:1200px;
+		margin:0 auto;
+		min-height:685px;
+		margin:0 auto;
+		background-size:contain;
+	}
+	&:after
+	{
+		content:'';
+		opacity:0.7;
+		width:100%;
+		height:100%;
+		position:absolute;
+		left:0;
+		bottom:0;
+		background:url('../imgs/bn-pattern.png') repeat;
+	}
+}
+#splash-content
+{
+	position:relative;
+	z-index:999;
+	@include grid-container;
+	max-width:1200px;
+	margin:0 auto;
+	//padding-top:150px;
+	padding-top:50%;
+	margin-bottom:100px;
+}
+#scontent
+{
+	@include grid-column(12);
+	h1
+	{
+		font-size:3em;
+		text-transform:uppercase;
+		color:map-get($colors, green);
+		font-family:$helvetica;
+		font-weight:100;
+	}
+}
+#cover
+{
+	background:url('../imgs/bn-pattern.png') repeat;
+	min-height:1000px;
+}
+#svgblock
+{
+	min-width:300px;
+	min-height:300px;
+	display:block;
+	margin:0 auto;
+	padding-top:10px;
+}
+#circle
+{
+	padding-top:10px;
+}
+@keyframes booyah
+{
+	to {
+		
+	}
+}
+#content
+{
+	padding-top:150px;
+}
+
